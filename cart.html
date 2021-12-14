@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+	<title>Shopping Cart</title>
+	<style>
+	#cart-wrap {
+  font-family: arial, sans-serif;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+#cart-products, #cart-items {
+  box-sizing: border-box;
+  padding: 10px;
+}
+#cart-products { width: 70%; }
+#cart-items { width: 30%; }
+input.cart, button.cart {
+  padding: 10px;
+  border: 0;
+  background: #ff4316;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* (B) PRODUCTS LIST */
+#cart-products {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+}
+.p-item {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+.p-img { max-width: 150px; }
+.p-name, .p-price { font-weight: 700; }
+.p-name, .p-desc, .p-price { margin: 5px 0; }
+.p-name { text-transform: uppercase; }
+.p-desc {
+  color: #aaa;
+  font-size: 0.9em;
+</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="products.js"></script>
+	<script src="cart.js"></script>
+</head>
+
+<body>
+	<div id="cart-wrap"> 
+		<div id="cart-products"> <!-- "productsContainer" -->
+		</div>
+		<div id="cart-items"> <!-- "cart-items" -->
+		</div>
+	</div>
+</body>
